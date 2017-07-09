@@ -3,7 +3,7 @@ from . import models
 # Register your models here.
 
 class SettingsEntryAdmin(admin.ModelAdmin):
-    list_display = ("name", "value")
+    list_display = ("name", "value", "created", "modified")
     prepopulated_fields = { "slug":("name",) }
 
 admin.site.register(models.SettingsEntry, SettingsEntryAdmin)
